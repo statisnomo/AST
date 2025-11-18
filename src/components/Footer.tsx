@@ -1,7 +1,16 @@
 import "./Footer.css";
 
-const Footer = () => {
+interface FooterProps {
+  setCurrentPage: (page: string) => void;
+}
+
+const Footer = ({ setCurrentPage }: FooterProps) => {
   const currentYear = new Date().getFullYear();
+
+  const handleNavClick = (page: string) => {
+    setCurrentPage(page);
+    window.scrollTo(0, 0);
+  };
 
   return (
     <footer className="footer">
@@ -11,7 +20,8 @@ const Footer = () => {
             <div className="footer-section">
               <h4>Atharv SecureTech</h4>
               <p>
-                Advanced cybersecurity solutions for a secure digital future.
+                Research-driven cybersecurity and IoT solutions for a secure
+                digital future.
               </p>
             </div>
 
@@ -19,34 +29,41 @@ const Footer = () => {
               <h4>Quick Links</h4>
               <ul>
                 <li>
-                  <a href="#home">Home</a>
+                  <button onClick={() => handleNavClick("home")}>Home</button>
                 </li>
                 <li>
-                  <a href="#about">About</a>
+                  <button onClick={() => handleNavClick("about")}>About</button>
                 </li>
                 <li>
-                  <a href="#services">Services</a>
+                  <button onClick={() => handleNavClick("services")}>
+                    Services
+                  </button>
                 </li>
                 <li>
-                  <a href="#team">Team</a>
+                  <button onClick={() => handleNavClick("research")}>
+                    Research
+                  </button>
                 </li>
               </ul>
             </div>
 
             <div className="footer-section">
-              <h4>Services</h4>
+              <h4>More</h4>
               <ul>
                 <li>
-                  <a href="#services">IoT Security</a>
+                  <button onClick={() => handleNavClick("partnerships")}>
+                    Partnerships
+                  </button>
                 </li>
                 <li>
-                  <a href="#services">Cloud Infrastructure</a>
+                  <button onClick={() => handleNavClick("careers")}>
+                    Careers
+                  </button>
                 </li>
                 <li>
-                  <a href="#services">Threat Detection</a>
-                </li>
-                <li>
-                  <a href="#services">Security Audits</a>
+                  <button onClick={() => handleNavClick("contact")}>
+                    Contact
+                  </button>
                 </li>
               </ul>
             </div>
@@ -55,11 +72,15 @@ const Footer = () => {
               <h4>Contact</h4>
               <p>Phone: +91-9550212579</p>
               <p>Email: atharvsecuretech@gmail.com</p>
+              <p>Location: Hyderabad, India</p>
             </div>
           </div>
 
           <div className="footer-bottom">
-            <p>&copy; {currentYear} Atharv SecureTech. All rights reserved.</p>
+            <p>
+              &copy; {currentYear} Atharv SecureTech Pvt. Ltd. All rights
+              reserved.
+            </p>
             <div className="footer-links">
               <a href="#privacy">Privacy Policy</a>
               <a href="#terms">Terms of Service</a>

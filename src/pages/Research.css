@@ -1,0 +1,158 @@
+.research-section {
+  padding-top: 100px;
+}
+
+.research-intro {
+  text-align: center;
+  margin-bottom: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.research-intro p {
+  font-size: 1.05rem;
+  color: var(--text-gray);
+  line-height: 1.8;
+}
+
+.focus-areas h3,
+.innovation-labs h3,
+.collaborate-section h3 {
+  font-size: 1.8rem;
+  color: var(--accent-cyan);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 60px;
+}
+
+.focus-card {
+  background: rgba(0, 191, 165, 0.05);
+  border: 1px solid rgba(0, 191, 165, 0.2);
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.focus-card:hover {
+  background: rgba(0, 191, 165, 0.1);
+  transform: translateY(-8px);
+  border-color: rgba(0, 191, 165, 0.4);
+}
+
+.focus-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  display: inline-block;
+  transform: scale(1);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.focus-card:hover .focus-icon {
+  transform: scale(1.2);
+}
+
+.focus-card h4 {
+  font-size: 1.15rem;
+  color: var(--accent-cyan);
+  margin-bottom: 10px;
+}
+
+.focus-card p {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  line-height: 1.5;
+}
+
+.innovation-labs {
+  background: rgba(0, 191, 165, 0.08);
+  border: 1px solid rgba(0, 191, 165, 0.3);
+  padding: 40px;
+  border-radius: 16px;
+  margin-bottom: 60px;
+}
+
+.labs-content p {
+  font-size: 1rem;
+  color: var(--text-gray);
+  margin-bottom: 25px;
+  line-height: 1.8;
+}
+
+.labs-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.labs-list li {
+  padding: 15px;
+  background: rgba(0, 191, 165, 0.05);
+  border-left: 3px solid var(--accent-cyan);
+  border-radius: 8px;
+  color: var(--text-gray);
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.labs-list li:hover {
+  background: rgba(0, 191, 165, 0.15);
+  transform: translateX(5px);
+}
+
+.collaborate-section {
+  background: linear-gradient(135deg, rgba(0, 191, 165, 0.1), rgba(0, 102, 255, 0.1));
+  border: 1px solid rgba(0, 191, 165, 0.3);
+  padding: 50px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.collaborate-section p {
+  font-size: 1.05rem;
+  color: var(--text-gray);
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+.collaborate-btn {
+  padding: 14px 40px;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+  color: var(--primary-dark);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.collaborate-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 191, 165, 0.4);
+}
+
+@media (max-width: 768px) {
+  .focus-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .innovation-labs,
+  .collaborate-section {
+    padding: 30px;
+  }
+
+  .labs-list {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,166 @@
+.services-section {
+  padding-top: 100px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.service-card {
+  background: rgba(0, 191, 165, 0.05);
+  border: 1px solid rgba(0, 191, 165, 0.2);
+  padding: 30px;
+  border-radius: 16px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  background: rgba(0, 191, 165, 0.1);
+  border-color: rgba(0, 191, 165, 0.5);
+  transform: translateY(-12px);
+  box-shadow: 0 0 30px rgba(0, 191, 165, 0.3), 0 10px 40px rgba(0, 191, 165, 0.1);
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: inline-block;
+  transform: scale(1);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.2);
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  color: var(--accent-cyan);
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.service-card:hover h3 {
+  color: var(--accent-blue);
+}
+
+.service-description {
+  font-size: 0.95rem;
+  color: var(--text-gray);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.service-details {
+  list-style: none;
+  margin-bottom: 25px;
+}
+
+.service-details li {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  padding-left: 20px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.service-details li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent-cyan);
+  font-weight: bold;
+}
+
+.service-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+  color: var(--primary-dark);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.service-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(0, 191, 165, 0.4);
+}
+
+.partnership-section {
+  background: rgba(0, 191, 165, 0.08);
+  border: 1px solid rgba(0, 191, 165, 0.3);
+  padding: 50px;
+  border-radius: 16px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.partnership-section h3 {
+  font-size: 1.8rem;
+  color: var(--accent-cyan);
+  margin-bottom: 15px;
+}
+
+.partnership-section p {
+  font-size: 1.05rem;
+  color: var(--text-gray);
+  margin-bottom: 30px;
+}
+
+.partner-btn {
+  padding: 14px 40px;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+  color: var(--primary-dark);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.partner-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 191, 165, 0.4);
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .service-card {
+    padding: 20px;
+  }
+
+  .partnership-section {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-icon {
+    font-size: 2.5rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .service-details {
+    margin-bottom: 15px;
+  }
+}
